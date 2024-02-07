@@ -1,33 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exo</title>
     <style>
-    /*CSS si nécessaire*/
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Exo 1</h1>
+    <h2>Énoncé :</h2>
+
+    <p>
+      Initialement, vous avez 500 jeux en stock et chaque jeu rapporte en
+      moyenne 15 €.
+    </p>
+
+    <h3>Création de la boutique:</h3>
+
+    <p>Déclarez le nom de la boutique et le nombre initial de jeux en stock.</p>
+
+    <h3>Promotion Spéciale:</h3>
+    <p>
+      Suite à une promotion spéciale, 30% des jeux sont vendus en une journée.
+      Mettez à jour le nombre de jeux en stock.
+    </p>
+    <p>Calculer la CA total de cette vente (montant total des ventes).</p>
+
+    <h3>Affichage:</h3>
+
+    <p>
+      Affichez le nom de la boutique, le nombre de jeux en stock, le stock mis à
+      jour et les revenus de la vente en euros en utilisant la concaténation
+      classique.
+    </p>
+
     <!-- Votre code HTML ici -->
     <script>
-        // Votre script JS ici
-        const boutique = "PixelBay"; // Déclaration du nom de la boutique, ne changera pas
-        const stock = 500; // Déclaration du stock initial, appelé à changer
-        const price = 15;
+      // Votre script JS ici
+      const boutique = "PixelBay"; // Déclaration du nom de la boutique, ne changera pas
+      const stock = 500; // Déclaration du stock initial, appelé à changer
+      const price = 15;
 
-        const promo = stock*(30/100); // Calcul des 30% vendus, rslt 150
-        console.log(promo)
-        const newStock = stock-promo; // Soustraction des 30% vendus au stock inital, rslt 350
-        console.log(newStock)
+      const promo = stock * (30 / 100); // Calcul des 30% vendus, rslt 150
+      console.log(promo);
+      const newStock = stock - promo; // Soustraction des 30% vendus au stock inital, rslt 350
+      console.log(newStock);
 
-        const ca = promo * price + "€"; // Calcul des revenus de la vente
-        console.log(ca)
+      const ca = promo * price + "€"; // Calcul des revenus de la vente
+      console.log(ca);
 
-        const newBoutique = boutique +" "+ newStock +" " +"jeux en stock" +" " + ca +" " +"de chiffre d'affaire"; //Affichage du nom de la boutique, du nombre de jeux en stock et du stock mis à jour
-        console.log(newBoutique)
+      const newBoutique =
+        boutique + " " + newStock + " " + "jeux en stock" + " " + ca +" " + "de chiffre d'affaire"; //Affichage du nom de la boutique, du nombre de jeux en stock et du stock mis à jour
+      console.log(newBoutique);
     </script>
-</body>
+  </body>
 </html>

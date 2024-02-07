@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exo</title>
     <style>
-    /*CSS si nécessaire*/
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Exo 4</h1>
+    <h2>Énoncé :</h2>
+
+    <p>PixelBay a une manière unique de gérer son stock de jeux vidéo. Chaque étagère peut contenir exactement 10 jeux. Vous devez aider le gérant à déterminer combien d'étagères seront complètement remplies et combien de jeux resteront après avoir organisé les étagères.</p>
+
+    <p>Demandez à l'utilisateur combien de jeux vidéo sont arrivés en stock aujourd'hui en utilisant prompt().</p>
+    <p>Calculez combien d'étagères seront complètement remplies.</p>
+    <p>Calculez combien de jeux vidéo resteront après avoir rempli les étagères.</p>
+    <p>Gérer le cas ou l'utilisateur indique 0</p>
+
     <!-- Votre code HTML ici -->
     <script>
-        // Votre script JS ici
+      // Votre script JS ici
+      const CAPACITE_DE_LETAGERE = 10;
+      let jeuxEnStock = Number(prompt("Combien de jeux vidéo avez-vous reçus en stock aujourd'hui ?"));
+    //   let etagere = 0;
+      let etagereRemplie = jeuxEnStock / CAPACITE_DE_LETAGERE; //combien de fois on a mis de jeux dans une etagere
+    //   console.log(etagereRemplie)
+      let jeuxRestants = jeuxEnStock % CAPACITE_DE_LETAGERE // le reste restant si la division n'est pas égale à 0
+    //   console.log(jeuxRestants + " " + "jeux restants")
+
+      if (jeuxEnStock === 0){ //si l'utilisateur entre 0 jeux 
+        console.log("Il n'y a pas d'étagère à remplir")
+      } else if (etagereRemplie % 10) { //tous les autres cas
+        console.log("il y a " + Math.floor(etagereRemplie) + " étagère remplies") //cas où seulement un nombre divisible par 10 est entré
+      }else {
+        console.log("il y a " + Math.floor(etagereRemplie) + " étagère remplies et " + jeuxRestants + " jeux restants") // cas ou le nombre entré n'est pas divisible par 10
+        // Math.floor : permet d'arondir à l'entier inferieur
+      }
     </script>
-</body>
+  </body>
 </html>

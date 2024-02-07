@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exo</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo 3</title>
     <style>
-    /*CSS si nécessaire*/
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Exo</h1>
+    <h2>Énoncé :</h2>
+
+    <p>
+      C'est un jour spécial pour le magasin ! En fonction des ventes de jeux
+      vidéo, le magasin décide d'entreprendre différentes actions. Votre tâche
+      est de créer un programme qui décidera des actions du magasin en fonction
+      des ventes de jeux.
+    </p>
+
+    <p>Les règles sont les suivantes :</p>
+
+    <p>
+      Si le nombre de jeux vendus est supérieur à 100, le magasin organise une
+      grande promotion.
+    </p>
+    <p>
+      Si le nombre de jeux vendus est entre 50 et 100, le magasin effectue une
+      réorganisation de son espace de vente.
+    </p>
+    <p>
+      Si le nombre de jeux vendus est inférieur à 50, le magasin lance une
+      campagne de publicité.
+    </p>
+
     <!-- Votre code HTML ici -->
     <script>
-        // Votre script JS ici
+      // Votre script JS ici
 
-        const boutique = "PixelBay"
-        let jeuxVendus = 150 //variable qui changera selon les tests
-        
-        if (jeuxVendus > 100) { //si on a vendu plus de 100 jeux
-            console.log(" Le magasin organise une grande promotion")
-        } else if (jeuxVendus <= 100 && jeuxVendus >= 50) { // si on a vendu entre 50 et 100 jeux
-            console.log("On réoganise l'espace de vente")
-            
-        } else if (jeuxVendus < 50){ // si on a vendu moins de 50 jeux
-            console.log("On lance une campagne de publicité")
-        }
-            
-        
+      const boutique = "PixelBay";
+      let jeuxVendus = 150; //variable qui changera selon les tests
+
+      if (jeuxVendus > 100) {
+        //si on a vendu plus de 100 jeux
+        console.log(" Le magasin organise une grande promotion");
+      } else if (jeuxVendus <= 100 && jeuxVendus >= 50) {
+        // si on a vendu entre 50 et 100 jeux
+        console.log("On réoganise l'espace de vente");
+      } else if (jeuxVendus < 50) {
+        // si on a vendu moins de 50 jeux
+        console.log("On lance une campagne de publicité");
+      }
     </script>
-</body>
+  </body>
 </html>
