@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo</title>
+    <style>
+    /*CSS si nécessaire*/
+    </style>
+</head>
+<body>
+    <h1>Exo</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+        // Votre script JS ici
+        const boutique = "PixelBay"; // Déclaration du nom de la boutique, ne changera pas
+        let stock = 500; // Déclaration du stock initial, appelé à changer
+        let price = 15;
+
+
+        let promo = stock*(30/100); // Calcul des 30% vendus, rslt 150
+        console.log(promo)
+        let newStock = stock-promo; // Soustraction des 30% vendus au stock inital, rslt 350
+        console.log(newStock)
+
+        let ca = promo * price + "€"; // Calcul des revenus de la vente
+        console.log(ca)
+
+        const newBoutique = boutique +" "+ newStock +" " +"jeux en stock" +" " + ca +" " +"de chiffre d'affaire"; //Affichage du nom de la boutique, du nombre de jeux en stock et du stock mis à jour
+        console.log(newBoutique)
+    </script>
+</body>
+</html>
