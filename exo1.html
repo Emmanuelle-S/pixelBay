@@ -15,16 +15,15 @@
     <script>
         // Votre script JS ici
         const boutique = "PixelBay"; // Déclaration du nom de la boutique, ne changera pas
-        let stock = 500; // Déclaration du stock initial, appelé à changer
-        let price = 15;
+        const stock = 500; // Déclaration du stock initial, appelé à changer
+        const price = 15;
 
-
-        let promo = stock*(30/100); // Calcul des 30% vendus, rslt 150
+        const promo = stock*(30/100); // Calcul des 30% vendus, rslt 150
         console.log(promo)
-        let newStock = stock-promo; // Soustraction des 30% vendus au stock inital, rslt 350
+        const newStock = stock-promo; // Soustraction des 30% vendus au stock inital, rslt 350
         console.log(newStock)
 
-        let ca = promo * price + "€"; // Calcul des revenus de la vente
+        const ca = promo * price + "€"; // Calcul des revenus de la vente
         console.log(ca)
 
         const newBoutique = boutique +" "+ newStock +" " +"jeux en stock" +" " + ca +" " +"de chiffre d'affaire"; //Affichage du nom de la boutique, du nombre de jeux en stock et du stock mis à jour
