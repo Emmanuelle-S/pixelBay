@@ -1,19 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exo</title>
     <style>
-    /*CSS si nécessaire*/
+        .container {
+            width: 300px;
+            height: 100px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Exo 6</h1>
     <!-- Votre code HTML ici -->
-    <script>
-        // Votre script JS ici
-    </script>
-</body>
+    <h2>Objectif :</h2>
+    <p>
+      Utilisation de la manipulation du DOM et compréhension des tableaux et de
+      la structure switch case en JavaScript.
+    </p>
+
+    <h2>Énoncé :</h2>
+
+    <p>
+      Chez PixelBay, chaque jeu vidéo a un code numérique associé (1,2,3,4,…).
+      En tant que gérant de la boutique, vous devez afficher le titre du jeu
+      dans le conteneur HTML prévu à cet effet en fonction du numéro entré par
+      l'utilisateur.
+    </p>
+
+    <p>Voici la correspondance entre les numéros et les jeux :</p>
+
+    <ul>
+      <li>"Space Adventure"</li>
+      <li>"Castle Quest"</li>
+      <li>"Mystery Island"</li>
+      <li>"Robot Wars"</li>
+    </ul>
+
+    <p>
+      Le code HTML, CSS et JavaScript de départ est fourni. Vous devez compléter
+      le code JavaScript pour que, lorsque l'utilisateur entre un numéro (1, 2,
+      3 ou 4) via prompt(), le titre correspondant du jeu s'affiche dans le
+      conteneur.
+    </p>
+    <div class="container" id="displayContainer"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
