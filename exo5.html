@@ -26,6 +26,16 @@
     <!-- Votre code HTML ici -->
     <script>
       // Votre script JS ici
+      let codeSecret = prompt("Quel est le code secret utilisé"); //demander à l'utilisateur le code
+      switch (codeSecret) { // va evaluer le code entrer dans le prompt et selon va executer le cas correspondant
+        case "Alpha" : console.log("Lancer la promotion de la semaine!");
+        break; // permet de terminer l'instruction en cours
+        case "Bravo" : console.log("Réorganiser la section des jeux rétro!");
+        break;
+        case "Charlie" : console.log("Préparer la zone de démonstration pour les nouveaux arrivages!")
+        break;
+        case "Delta" : console.log("Vérifier l'inventaire des accessoires!")
+      }
     </script>
   </body>
 </html>
