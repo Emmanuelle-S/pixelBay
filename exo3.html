@@ -14,6 +14,20 @@
     <!-- Votre code HTML ici -->
     <script>
         // Votre script JS ici
+
+        const boutique = "PixelBay"
+        let jeuxVendus = 150 //variable qui changera selon les tests
+        
+        if (jeuxVendus > 100) { //si on a vendu plus de 100 jeux
+            console.log(" Le magasin organise une grande promotion")
+        } else if (jeuxVendus <= 100 && jeuxVendus >= 50) { // si on a vendu entre 50 et 100 jeux
+            console.log("On réoganise l'espace de vente")
+            
+        } else if (jeuxVendus < 50){ // si on a vendu moins de 50 jeux
+            console.log("On lance une campagne de publicité")
+        }
+            
+        
     </script>
 </body>
 </html>
