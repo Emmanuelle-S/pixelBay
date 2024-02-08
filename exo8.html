@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exo</title>
     <style>
-    /*CSS si nécessaire*/
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Exo 8</h1>
     <!-- Votre code HTML ici -->
+    <h2>Objectif :</h2>
+    <p>
+      Comprendre et appliquer la boucle for en JavaScript et faire des
+      éporations sur un tableau.
+    </p>
+
+    <h2>Énoncé :</h2>
+
+    <p>
+      PixelBay souhaite améliorer l'organisation interne et la planification de
+      ses activités hebdomadaires. Pour ce faire, ils ont besoin d'un script
+      simple permettant d'afficher les jours de la semaine. Votre tâche est de
+      créer un script qui parcourt un tableau contenant les jours de la semaine
+      et les affiche un par un dans la console.
+    </p>
+
+    <h2>Instructions :</h2>
+
+    <ol>
+      <li>
+        Création du Tableau : Déclarez un tableau joursSemaines contenant les
+        noms des jours de la semaine, du lundi au dimanche.
+      </li>
+      <li>
+        Affichage des Jours : Utilisez une boucle for pour parcourir le tableau
+        joursSemaines et affichez chaque jour dans la console.
+      </li>
+    </ol>
+
+    <h2>Conseils :</h2>
+
+    <ul>
+      <li>
+        Assurez-vous que votre tableau commence par "Lundi" et se termine par
+        "Dimanche".
+      </li>
+      <li>Utilisez la méthode console.log() pour afficher chaque jour.</li>
+    </ul>
+
     <script>
-        // Votre script JS ici
+      // Votre script JS ici
+
+      weekDay = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"] // Création du tableau
+
+      for (let index = 0; index < weekDay.length; index++) { //démarre la boucle à l'index 0, va tourner jusqu'à la fin du tableau (.length), incrémente de 1 à chaque passage
+        let day = weekDay[index]; // permet de parcourir index par index
+        
+        console.log(day)
+      }
     </script>
-</body>
+  </body>
 </html>
