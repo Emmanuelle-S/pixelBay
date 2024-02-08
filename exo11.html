@@ -1,19 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exo</title>
     <style>
-    /*CSS si nécessaire*/
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Exo 11</h1>
     <!-- Votre code HTML ici -->
+    <h2>Objectif :</h2>
+    <p>Comprendre et appliquer les fonctions en JavaScript.</p>
+
+    <h2>Énoncé :</h2>
+
+    <p>
+      Chez PixelBay, différentes promotions sont appliquées en fonction des
+      événements et des périodes de l'année. Votre mission en tant que
+      développeur du site web de PixelBay est de créer des fonctions pour
+      calculer les prix des jeux après l'application des différentes promotions.
+    </p>
+
+    <p>Vous devez écrire des fonctions pour les scénarios suivants :</p>
+
+    <li>
+      Promotion d'été : Applique une réduction de 20% sur le prix d'origine.
+    </li>
+    <li>
+      Promotion d'hiver : Applique une réduction de 30% sur le prix d'origine.
+    </li>
+    <li>
+      Promotion spéciale : Applique une réduction personnalisée en pourcentage,
+      passée en paramètre de la fonction.
+    </li>
+
+    <p>
+      Chaque fonction doit prendre le prix d'origine du jeu en tant que
+      paramètre et retourner le nouveau prix après l'application de la
+      réduction.
+    </p>
+
+    <h2>Indices :</h2>
+
+    <ul>
+      <li>Utilisez des fonctions avec des paramètres.</li>
+      <li>
+        Assurez-vous de retourner le résultat calculé dans chaque fonction.
+      </li>
+    </ul>
+
     <script>
-        // Votre script JS ici
+      // Votre script JS ici
+
+      // Code de depart
+
+      
+      let gamePrice = 10;
+
+      // Fonction pour la promotion d'été
+      function summerSales(prixDeBase, montantDeSolde) {
+        summerPromo = gamePrice * (20/100);
+        newSummerGamePrice = gamePrice - summerPromo;
+        console.log(newSummerGamePrice);
+        return newSummerGamePrice;
+      }
+      console.log("Prix après promotion d'été :", summerSales(gamePrice) + " €");
+
+      // Fonction pour la promotion d'hiver
+
+      function winterSales(prixDeBase, montantDeSolde) {
+        winterPromo = gamePrice * (30/100);
+        newWinterGamePrice = gamePrice - winterPromo;
+        console.log(newWinterGamePrice);
+        return newWinterGamePrice;
+      }
+      console.log("Prix après promotion d'hiver :", winterSales(gamePrice) + " €");
+
+      // Fonction pour la promotion spéciale
+
+      function specialSales(prixDeBase, a) {
+        specialPromo = gamePrice * (a/100);
+        newSpecialPrice = gamePrice - specialPromo;
+        return newSpecialPrice
+      }
+      console.log("Prix après promotion spéciale (15% de réduction) :", specialSales(gamePrice, 15))
+
+    
+
+    //VERSION RENAUD
+    //      let gamePrice = 10;
+      // Fonction pour la promotion d'été
+    //   function summerSales(a,b) {
+    //     pourcent = a * (b/100)
+    //     newGamePrice = gamePrice - pourcent
+    //     console.log(newGamePrice);
+    //     return newGamePrice
+
+    //   }
+     //gamePrice.log("Prix après promotion d'été :", summerSales(gamePrice,20));
     </script>
-</body>
+  </body>
 </html>
