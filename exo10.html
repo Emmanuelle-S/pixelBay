@@ -1,19 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exo</title>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les Jeux Vidéo du Calendrier PixelBay</title>
     <style>
-    /*CSS si nécessaire*/
+        ol {
+            width: 300px;
+            margin: 50px auto;
+            font-size: 18px;
+        }
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Exo 10</h1>
     <!-- Votre code HTML ici -->
+    <h2>Objectif :</h2>
+    <p>
+      Interagir avec le DOM, utiliser les tableaux, les chaînes de caractères
+      modèle (template strings) et la boucle for en JavaScript, ainsi que créer
+      et ajouter des éléments au DOM.
+    </p>
+
+    <h2>Énoncé :</h2>
+
+    <p>
+      Chez PixelBay, chaque mois est associé à un jeu vidéo phare. En tant que
+      gérant, votre mission est de créer une liste ordonnée sur la page web qui
+      affiche chaque mois avec son jeu vidéo associé.
+    </p>
+
+    <p>
+      Utilisez la boucle for pour parcourir le tableau des jeux. Pour chaque
+      jeu, créez un élément de liste (li) et ajoutez-le à la liste ordonnée (ol)
+      déjà présente sur la page.
+    </p>
+
+    <h2>Indices :</h2>
+
+    <ul>
+      <li>
+        Utilisez document.createElement('li') pour créer un nouvel élément de
+        liste.
+      </li>
+      <li>
+        Utilisez appendChild pour ajouter cet élément à la liste ordonnée.
+      </li>
+    </ul>
+
+    <ol id="listeJeux"></ol>
+    
+    <script src="script_exo10.js"></script>
     <script>
-        // Votre script JS ici
+      // Votre script JS ici
     </script>
-</body>
+  </body>
 </html>
