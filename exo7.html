@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exo</title>
     <style>
-    /*CSS si nécessaire*/
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Exo 7</h1>
     <!-- Votre code HTML ici -->
+    <h2>Objectif :</h2>
+    <p>Comprendre et appliquer la boucle while en JavaScript.</p>
+
+    <h2>Énoncé :</h2>
+
+    <p>
+      Chez PixelBay, un grand effort est nécessaire pour maintenir le stock de
+      jeux vidéo. Chaque livraison apporte 5 jeux vidéo au magasin. Votre
+      mission est d'aider le gérant à déterminer combien de livraisons seront
+      nécessaires pour atteindre le stock cible.
+    </p>
+
+    <p>
+      Le code initial vous donne un stock cible pour le magasin, mais vous devez
+      utiliser la boucle while pour calculer le nombre de livraisons
+      nécessaires.
+    </p>
+
+    <p>Les étapes sont les suivantes :</p>
+
+    <ul>
+      <li>Initiez un compteur pour le nombre de livraisons.</li>
+      <li>
+        Tant que le stock n'atteint pas le niveau cible, ajoutez des jeux vidéo
+        au stock et augmentez le compteur de livraisons.
+      </li>
+      <li>
+        Affichez le nombre total de livraisons une fois que le stock cible est
+        atteint.
+      </li>
+    </ul>
+
+    <p>Considérez que :</p>
+
+    <ul>
+      <li>Chaque livraison apporte exactement 5 jeux vidéo.</li>
+      <li>Le stock cible du magasin est de 100 jeux vidéo.</li>
+    </ul>
+
     <script>
-        // Votre script JS ici
+      // Votre script JS ici
+      let stockCible = 100;
+      let jeuxEnStock = 0;
+      let nouvelleLivraison = 0;
+
+      while (jeuxEnStock < stockCible) {//tant que jeuxEnStock n'a pas atteint la valeur de stockCible
+        nouvelleLivraison++; //initialise la boucle en incrémentant de 1 à chaque passage
+        jeuxEnStock = jeuxEnStock + 5; //modifie la valeur de l'incrémentation de 1 à 5
+
+        console.log(jeuxEnStock);
+      }
     </script>
-</body>
+  </body>
 </html>
