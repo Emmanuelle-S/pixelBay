@@ -1,19 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exo</title>
     <style>
-    /*CSS si nécessaire*/
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Compteur de Likes chez PixelBay</h1>
     <!-- Votre code HTML ici -->
+    <h2>Objectif :</h2>
+    <p>
+      Mettre en pratique la manipulation du DOM et l'utilisation des écouteurs
+      d'événements en JavaScript en créant un compteur de likes simple.
+    </p>
+
+    <h2>Énoncé :</h2>
+
+    <p>
+      Dans le cadre de l'amélioration de l'interface utilisateur du site de
+      PixelBay, vous êtes chargé de développer une fonctionnalité permettant aux
+      utilisateurs d'exprimer leur appréciation pour les jeux disponibles dans
+      le magasin. Pour cela, vous allez créer un compteur de likes qui
+      s'incrémente à chaque clic sur un bouton.
+    </p>
+
+    <p>Votre tâche consiste à :</p>
+
+    <ol>
+      <li>
+        Créer un Bouton : Ajoutez une balise button à votre HTML avec l'ID
+        button pour permettre aux utilisateurs de liker.
+      </li>
+      <li>
+        Afficher le Compteur : Créez une balise (par exemple, span ou div) où le
+        nombre de likes sera affiché. Donnez-lui l'ID compteur.
+      </li>
+      <li>
+        Incrémenter le Compteur : Chaque clic sur le bouton doit incrémenter le
+        compteur de likes et mettre à jour l'affichage.
+      </li>
+      <li>
+        Interdiction d'Utiliser onclick : Vous ne devez pas utiliser l'attribut
+        onclick() dans votre HTML. À la place, attachez un écouteur d'événements
+        à votre bouton en JavaScript.
+      </li>
+    </ol>
+
+    <button id="button"><span id="compteur">👍Like </span></button>
+
+
     <script>
-        // Votre script JS ici
+      // Votre script JS ici
+      const button = document.querySelector("#button")
+      let number = 0
+      console.log(button)
+      button.addEventListener ("click", function (event) {
+        console.log(event)
+        button.innerText = "👍Like " + number++ + " personnes aiment ça"
+      })
     </script>
-</body>
+  </body>
 </html>
