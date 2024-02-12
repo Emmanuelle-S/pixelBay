@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo GPT</title>
+    <style>
+      /*CSS si nécessaire*/
+    </style>
+  </head>
+  <body>
+    <h1>Exo</h1>
+    <!-- Votre code HTML ici -->
+    <script>
+      // Votre script JS ici
+      // Liste des jours fériés en France pour l'année 2020
+      const joursFeries2020 = [
+        new Date(2020, 0, 1), // Nouvel An
+        new Date(2020, 4, 1), // Fête du Travail
+        new Date(2020, 4, 8), // Victoire 1945
+        new Date(2020, 6, 14), // Fête Nationale
+        new Date(2020, 7, 15), // Assomption
+        new Date(2020, 10, 1), // Toussaint
+        new Date(2020, 10, 11), // Armistice 1918
+        new Date(2020, 11, 25), // Noël
+      ];
+
+      // Fonction pour déterminer le type de jour
+      function jourTravaille(date) {
+        const jourSemaine = date.getDay(); // Récupérer le jour de la semaine (0: Dimanche, 1: Lundi, ..., 6: Samedi)
+
+        // Vérifier si c'est un jour férié
+        for (const jourFerie of joursFeries2020) {
+          if (date.getTime() === jourFerie.getTime()) {
+            return "C'est un jour férié.";
+          }
+        }
+
+        // Vérifier si c'est un week-end (samedi ou dimanche)
+        if (jourSemaine === 0 || jourSemaine === 6) {
+          return "C'est un week-end.";
+        }
+
+        // Si ce n'est ni un jour férié ni un week-end, c'est un jour travaillé
+        return "C'est un jour travaillé.";
+      }
+
+      // Exemple d'utilisation de la fonction
+      const dateTest = new Date(2020, 0, 5); // Date de test (1er Janvier 2020)
+      console.log(jourTravaille(dateTest)); // Affiche "C'est un jour férié."
+    </script>
+  </body>
+</html>

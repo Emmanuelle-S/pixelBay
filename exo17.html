@@ -1,19 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exo</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vérification des Jours Travaillés chez PixelBay</title>
     <style>
-    /*CSS si nécessaire*/
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Exo 17</h1>
     <!-- Votre code HTML ici -->
+    <h2>Objectif :</h2>
+    <p>
+      Développer une fonction pour déterminer si une date donnée correspond à un
+      jour travaillé, un week-end ou un jour férié en utilisant JavaScript.
+    </p>
+
+    <h2>Énoncé :</h2>
+
+    <p>
+      En tant que développeur chez PixelBay, vous êtes chargé d'améliorer le
+      système de gestion du temps en créant une fonction qui analyse les dates.
+      Cette fonction, nommée jourTravaille, prend en paramètre une date au
+      format Date et vérifie si cette date correspond à un jour férié de l'année
+      2020, un week-end, ou un jour travaillé. Les jours fériés pour l'année
+      2020 sont listés sur le site officiel des démarches administratives.
+    </p>
+
+    <p>
+      Votre tâche est de créer cette fonction qui affiche un message approprié
+      en fonction du type de jour analysé.
+    </p>
+
+    <p>Instructions :</p>
+
+    <ol>
+      <li>
+        Création de la Liste des Jours Fériés : Initialisez un tableau
+        joursFeries2020 contenant les dates des jours fériés en France pour
+        l'année 2020.
+      </li>
+      <li>
+        Déclaration de la Fonction : Écrivez la fonction jourTravaille qui
+        accepte une date en paramètre et détermine si c'est un jour férié, un
+        week-end ou un jour travaillé.
+      </li>
+      <li>
+        Affichage des Résultats : La fonction doit retourner un message formaté
+        indiquant si le jour est férié, un week-end, ou un jour travaillé.
+      </li>
+    </ol>
+
     <script>
-        // Votre script JS ici
+      // Votre script JS ici
+      // Initialisation de la liste des jours fériés
+      const joursFeries2020 = [
+        "2020-01-01",
+        "2020-04-13",
+        "2020-05-01",
+        "2020-05-08",
+        "2020-05-21",
+        "2020-06-01",
+        "2020-07-14",
+        "2020-08-15",
+        "2020-11-01",
+        "2020-11-11",
+        "2020-12-25",
+      ];
+      //   console.log(joursFeries2020);
+
+      // Déclaration de la fonction jourTravaille
+      function jourTravaille(dateSouhaitee, listeJoursFeries) {
+        // Votre logique ici
+        for (let index = 0; index < joursFeries2020.length; index++) {
+            const a = new Date(dateSouhaitee)
+            const b = new Date(joursFeries2020[index])
+            // console.log(a.getTime());
+            // console.log(b.getTime());
+
+          if (a.getTime() == b.getTime()) {
+            console.log("✅ Cette date est un jour férié");
+          }
+          
+        //    console.log(a.getDay());
+           if (a.getDay () == 0 || a.getDay == 6) {  // permet de récupérer les jours, tableaux allant de 0 à 6, 0 correspondant à dimanche
+            console.log("✅ Ce jour est un weekend")
+           } else { // si ce n'est pas un weekend c'est donc un jour travaillé
+            console.log("❌ Ce n'est pas un jour de weekend, c'est un jour travaillé")
+           }
+        }
+      }
+      jourTravaille("2020-01-01", joursFeries2020);
     </script>
-</body>
+  </body>
 </html>
