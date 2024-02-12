@@ -1,19 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exo</title>
     <style>
-    /*CSS si nécessaire*/
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Exo 16</h1>
     <!-- Votre code HTML ici -->
+    <h2>Objectif :</h2>
+    <p>
+      Apprendre à créer et manipuler des tableaux en JavaScript, une compétence
+      essentielle pour gérer des collections d'éléments telles que les
+      inventaires de produits.
+    </p>
+
+    <h2>Énoncé :</h2>
+
+    <p>
+      En tant que membre de l'équipe de développement de PixelBay, votre mission
+      est de créer un système de gestion d'inventaire pour suivre les articles
+      disponibles dans le magasin. Vous commencerez par créer un tableau
+      représentant les différents articles en stock, puis vous appliquerez des
+      manipulations basiques sur ce tableau pour gérer l'inventaire.
+    </p>
+
+    <p>Votre programme doit accomplir les tâches suivantes :</p>
+
+    <ol>
+      <li>
+        Création de l'Inventaire : Déclarez un tableau inventaire contenant les
+        noms de cinq articles différents disponibles dans le magasin PixelBay.
+      </li>
+      <li>
+        Ajout d'Articles : Ajoutez deux nouveaux articles à l'inventaire en
+        utilisant la méthode appropriée pour les tableaux.
+      </li>
+      <li>
+        Suppression d'un Article : Supprimez le premier article de l'inventaire.
+      </li>
+      <li>
+        Affichage de l'Inventaire : Utilisez une boucle pour afficher tous les
+        articles de l'inventaire dans la console, chacun avec un préfixe
+        "Article : ".
+      </li>
+    </ol>
+
+    <h2>Conseils :</h2>
+
+    <p>
+      Révisez comment ajouter des éléments à un tableau avec push() et comment
+      en retirer avec shift() ou splice().
+    </p>
+    <p>
+      Pensez à utiliser une boucle for ou forEach pour parcourir le tableau et
+      afficher les éléments.
+    </p>
+
     <script>
-        // Votre script JS ici
+      // Votre script JS ici
+      let inventaire = ["Jeu vidéos", "BD", "Figurines", "Snacks", "Magasines"] // création du tableau initial
+      console.log(inventaire);
+      inventaire.push("Boisson", "Cartes Pokémon") // ajouter 2 items au tableau de base
+      console.log(inventaire)
+      inventaire.splice(0, 1) // permet d'enlever 1 élément à l'index 0 (donc le 1er du tableau)
+      console.log(inventaire);
+
+      for (let index = 0; index < inventaire.length; index++) {
+        const affichageArticle = inventaire[index];
+        console.log("Article : " + affichageArticle);
+      }
+
     </script>
-</body>
+  </body>
 </html>
