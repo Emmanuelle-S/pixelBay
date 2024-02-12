@@ -8,7 +8,8 @@
     <style>
       /*CSS si nécessaire*/
               /* Ajoutez vos styles ici */
-              .konami-activated {
+              /* .konami-activated {
+                background-color: rebeccapurple; */
             /* Styles après activation du code Konami */
         }
     </style>
@@ -63,6 +64,33 @@
 
     <script>
       // Votre script JS ici
+
+   
+    let pattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+    let current = 0
+    let keyHandler = function (event) {
+        console.log(event.key)
+        //si la clé n'est pas dans le pattern, reset la fonction ou si l'ordre des touches entrées n'est pas le bon
+        if (pattern.indexOf(event.key) < 0 || event.key !== pattern[current]) {
+            current = 0;
+            return;
+        }
+
+        // mise à jour de l'état d'avancement du modele en cas de succès, clé par clé (incrémentation)
+        current++;
+
+        // Comportement en cas de pattern complet, comment alerter et effacer
+        if (pattern.length === current) {
+            current = 0
+            window.alert('Bravo tu as trouvé')
+            // document.body.classList.add.('konami-activated') -> pour activer la classe css
+            document.body.style.backgroundColor = "pink" 
+            //pour mettre du style directement via le js
+        }
+    }
+    document.addEventListener('keydown', keyHandler, false);
+    console.log(keyHandler);
+
     </script>
   </body>
 </html>
