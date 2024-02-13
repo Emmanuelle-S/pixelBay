@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo</title>
+    <style>
+      /*CSS si nécessaire*/
+    </style>
+  </head>
+  <body>
+    <h1>Exo</h1>
+    <!-- Votre code HTML ici -->
+    <h2>Objectif :</h2>
+    <p>Manipuler des objets et des tableaux.</p>
+
+    <h2>Énoncé :</h2>
+
+    <p>
+      Votre mission est de développer un programme qui gère une collection de
+      jeux. Cette collection inclut à la fois des jeux vidéo rétro et des jeux
+      modernes. Chaque jeu est représenté par un objet avec des détails
+      spécifiques.
+    </p>
+
+    <h2>Tâches à accomplir :</h2>
+
+    <ol>
+      <li>
+        Créer des Jeux : Utilisez la fonction creerJeu pour créer des objets de
+        jeu. Chaque jeu doit inclure un titre, une année de sortie et un genre.
+      </li>
+      <li>
+        Afficher la Collection : Développez une fonction afficherListeJeux qui
+        prend une liste de jeux en paramètre (array) et affiche leurs détails.
+      </li>
+      <li>
+        Analyser la Collection : Implémentez la fonction
+        calculerMoyenneAnneesSortie pour calculer et afficher l'année moyenne de
+        sortie des jeux dans une liste donnée.
+      </li>
+    </ol>
+
+    <h2>Construisez deux collections de jeux :</h2>
+
+    <ul>
+      <li>Une pour les jeux rétro (3 jeux).</li>
+      <li>Une autre pour les jeux modernes (4 jeux).</li>
+    </ul>
+
+    <h2>Défi supplémentaire :</h2>
+
+    <p>
+      Analysez et comparez les années moyennes de sortie entre les jeux rétro et
+      les jeux modernes.
+    </p>
+
+    <script>
+      // Votre script JS ici
+      function creerJeu(titre, sortie, genre) {
+        return {
+          titre: titre,
+          sortie: sortie,
+          genre: genre,
+        };
+      }
+
+      let jeuRetro = [
+        creerJeu("PacMan", 1980, "Arcade"),
+        creerJeu("Metroid", 1987, "Arcade"),
+        creerJeu("Space Invador", 1981, "Arcade"),
+      ];
+      console.log(jeuRetro);
+
+      let jeuModerne = [
+        creerJeu("Mario Kart 8", 2022, "Course"),
+        creerJeu("Super Mario Party", 2021, "Party Game"),
+        creerJeu("Animal Crossing", 2020, "Simulation de vie"),
+        creerJeu("Les Sims 4", 2014, "Simulation de vie"),
+      ];
+      console.log(jeuModerne);
+
+      function afficherListeJeux(liste) {
+        for (let index = 0; index < liste.length; index++) {
+          const titre = liste[index].titre;
+          const sortie = liste[index].sortie;
+          const genre = liste[index].genre;
+
+          console.log(
+            `Titre : ${titre}\nDate de sortie ${sortie}\nType de jeu : ${genre}`
+          );
+        }
+      }
+
+      afficherListeJeux(jeuModerne);
+      afficherListeJeux(jeuRetro);
+
+      function calculerMoyenneAnneesSortie(liste) {
+        let moyenne = 0;
+        for (let index = 0; index < liste.length; index++) {
+          moyenne += liste[index].sortie;
+        }
+        let moyenneAnnée = moyenne / liste.length;
+        console.log(
+          `L'année moyenne de sortie est ${Math.floor(moyenneAnnée)}`
+        );
+      }
+
+      calculerMoyenneAnneesSortie(jeuRetro);
+      calculerMoyenneAnneesSortie(jeuModerne);
+    </script>
+  </body>
+</html>
