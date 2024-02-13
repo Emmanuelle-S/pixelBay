@@ -1,19 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exo</title>
     <style>
-    /*CSS si nécessaire*/
+      /*CSS si nécessaire*/
     </style>
-</head>
-<body>
-    <h1>Exo</h1>
+  </head>
+  <body>
+    <h1>Exo 18</h1>
     <!-- Votre code HTML ici -->
+    <h2>Énoncé :</h2>
+
+    <p>
+      Votre nouvelle mission est de construire un programme dynamique qui
+      détermine quel jeu parmi deux titres phares a conquis le cœur des gamers à
+      travers le monde.
+    </p>
+
+    <p>
+      Concevez deux objets représentant deux jeux vidéo légendaires. Chaque
+      objet doit inclure :
+    </p>
+
+    <ul>
+      <li>Titre : Le nom évocateur du jeu.</li>
+      <li>Année de Sortie : L'année où le jeu a fait ses débuts.</li>
+      <li>Genre : Le style du jeu, tel que Arcade, Aventure, etc.</li>
+      <li>Score : La note globale du jeu sur 100, reflétant son succès.</li>
+    </ul>
+
+    <p>Chacun de ces objets doit posséder deux fonctions essentielles :</p>
+
+    <ul>
+      <li>
+        affichage() : Un appel de projecteur sur le jeu, affichant toutes ses
+        informations clés.
+      </li>
+      <li>
+        getPopularite() : Un calcul stratégique qui détermine la popularité du
+        jeu en utilisant la formule : Popularité = (score * année de sortie) /
+        100.
+      </li>
+    </ul>
+
+    <p>Défis :</p>
+
+    <ul>
+      <li>
+        Affichage Stratégique : Mettez en scène un duel captivant entre les deux
+        jeux. Qui remportera le titre du jeu le plus populaire ?
+      </li>
+      <li>
+        Calcul de la Popularité : Utilisez vos compétences en programmation pour
+        calculer et afficher la popularité de chaque jeu.
+      </li>
+    </ul>
+
     <script>
-        // Votre script JS ici
+      // Votre script JS ici
+      let jeu1 = {
+        // Complétez avec les informations du premier jeu
+        titre: "FoxGame", // création de l'objet => valeur: propriété
+        sortie: 2021,
+        genre: "aventure",
+        score: 50 / 100,
+        affichage: function () { // création de la fonction au sein de l'objet (affichage = nom de la fonction)
+          console.log(this); // 
+        },
+        getPopulaire: function () {
+            return (this.score * this.sortie) / 100
+        }
+      };
+
+      jeu1.affichage()
+      console.log(jeu1.getPopulaire())
+
+      let jeu2 = {
+        // Complétez avec les informations du second jeu
+        titre: "SkyWar",
+        sortie: 2020,
+        genre: "FPS",
+        score: 60 / 100,
+        affichage: function () {
+            console.log(this)
+        },
+        getPopulaire: function () {
+            return (this.score * this.sortie) / 100
+        }
+      };
+
+      jeu2.affichage()
+      console.log(jeu2.getPopulaire())
+
+      if (jeu1.score > jeu2.score) {
+        alert("FoxGame est le jeu le plus populaire")
+        
+      }else {
+        alert("SkyWar est le jeu le plus populaire") 
+      }
+      
     </script>
-</body>
+  </body>
 </html>
