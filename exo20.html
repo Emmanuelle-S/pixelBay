@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exo</title>
+    <style>
+      /*CSS si nécessaire*/
+    </style>
+  </head>
+  <body>
+    <h1>Exo</h1>
+    <!-- Votre code HTML ici -->
+    <h2>Énoncé :</h2>
+
+    <p>
+      On vous demande maintenant de développer un système de gestion pour une
+      grande collection de jeux vidéo chez PixelBay. Chaque jeu de la collection
+      est représenté par un objet contenant des détails clés. Votre mission est
+      d'implémenter un ensemble de fonctions pour interagir avec cette
+      collection.
+    </p>
+
+    <p>Votre programme doit inclure les fonctionnalités suivantes :</p>
+
+    <ul>
+      <li>
+        Manipulation de la Collection : Travaillez avec un tableau d'objets, où
+        chaque objet représente un jeu vidéo distinct.
+      </li>
+
+      <li>Fonctions à Implémenter :</li>
+      <ul>
+        <li>afficherJeu(jeu): Affiche les détails d'un jeu spécifique.</li>
+        <li>
+          afficherCollection(collection): Parcourt et affiche tous les jeux de
+          la collection.
+        </li>
+        <li>
+          calculerMoyenneScore(jeu): Calcule la moyenne des scores de critique
+          d'un jeu.
+        </li>
+        <li>
+          calculerMoyenneScoresCollection(collection): Détermine la moyenne des
+          scores pour l'ensemble de la collection.
+        </li>
+      </ul>
+    </ul>
+
+    <script>
+      // Votre script JS ici
+      let collection = [
+        // Votre code pour créer la collection de jeux
+        {
+          titre: "Space Adventure",
+          anneeSortie: 1984,
+          scores: [85, 87, 90, 78, 88],
+        },
+        {
+          titre: "Pacman",
+          anneeSortie: 1989,
+          scores: [81, 57, 60, 73, 18],
+        },
+        {
+          titre: "Mario",
+          anneeSortie: 1990,
+          scores: [25, 84, 40, 98, 23],
+        },
+        {
+          titre: "Animal Crossing",
+          anneeSortie: 2020,
+          scores: [45, 65, 78, 29, 44],
+        },
+        {
+          titre: "Les Sims",
+          anneeSortie: 1994,
+          scores: [23, 54, 34, 65, 87],
+        },
+        // ...
+      ];
+
+      console.log(collection);
+
+      function afficherJeux(jeu) {
+        const titre = jeu.titre;
+        const annéeSortie = jeu.anneeSortie;
+        const scores = jeu.scores;
+
+        console.log(
+          `Titre : ${titre}\nDate de sortie ${annéeSortie}\nScore du jeu : ${scores}`
+        );
+      }
+      afficherJeux(collection[1]);
+
+      function afficherCollection(collection) {
+        for (let index = 0; index < collection.length; index++) {
+          const titre = collection[index].titre;
+          console.log(
+            `Titre : ${titre}`
+          );
+        }
+      }
+
+      afficherCollection(collection)
+
+      function calculerMoyenneScoresCollection(collection) {
+        let moyenne = 0;
+        for (let index = 0; index < collection.length; index++) {
+          moyenne += collection[index].scores[index];
+        }
+        let scoreMoyen = moyenne / collection.length;
+        console.log(
+          `Le score moyen de tous les jeux est ${Math.floor(scoreMoyen)}`
+        );
+      }
+
+      //IL MANQUE CETTE CONSIGNE /  calculerMoyenneScore(jeu): Calcule la moyenne des scores de critique
+        //   d'un jeu.
+
+
+      function calculerMoyenneScoresCollection(collection) {
+        let moyenne = 0;
+        for (let index = 0; index < collection.length; index++) {
+          moyenne += collection[index].scores[index];
+        }
+        let scoreMoyen = moyenne / collection.length;
+        console.log(
+          `Le score moyen de tous les jeux est ${Math.floor(scoreMoyen)}`
+        );
+      }
+
+      calculerMoyenneScoresCollection(collection)
+
+
+    </script>
+  </body>
+</html>
